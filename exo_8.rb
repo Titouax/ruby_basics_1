@@ -13,10 +13,12 @@ def pyramid(floor)
     print '*' * (j+1)
     puts '*' * j
   }
+  @counter = 0
 end
 
 def perform
    pyramid(number_ask)
+
 end
 
 perform
@@ -24,6 +26,7 @@ perform
 def lauch_dice
   @dice_face = (rand(1..6)).to_i
   puts "le dé affiche #{@dice_face}"
+  @counter =  @counter + @dice_face
 end
 
 def climbing_step(lauch_dice)
@@ -32,12 +35,13 @@ end
 
 def perform2
 climbing_step(lauch_dice)
+puts "tu est niveau #{@counter} sur #{@number}"
 end
-
-perform2
 
 def reaching_top
-  while condition
-
+  while @counter <= @number  
+    perform2
   end
 end
+
+reaching_top
