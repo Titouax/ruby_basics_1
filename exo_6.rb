@@ -4,7 +4,7 @@ def define_password
   @user_password = gets.chomp.to_s
 end
 
-def password_verification(define_password)
+def password_verification
   puts "Veuillez confirmer votre mot de passe :"
   print "> "
   password = gets.chomp

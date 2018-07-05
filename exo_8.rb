@@ -39,9 +39,10 @@ puts "tu est niveau #{@counter} sur #{@number}"
 end
 
 def reaching_top
-  while @counter <= @number  
+  while @counter <= @number
     perform2
   end
+  puts "Bravo, tu as gagné"
 end
 
 reaching_top
